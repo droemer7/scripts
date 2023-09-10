@@ -51,10 +51,10 @@ then
   cmake_flags=()
 elif [ $build == "debug" ]
 then
-  cmake_flags=(-DCMAKE_BUILD_TYPE="Debug" -DCMAKE_CXX_FLAGS="-O0")
+  cmake_flags=(-DCMAKE_BUILD_TYPE="Debug" -DCMAKE_CXX_FLAGS="-Wall -O0")
 elif [ $build == "release" ]
 then
-  cmake_flags=(-DCMAKE_BUILD_TYPE="RelWithDebugInfo" -DCMAKE_CXX_FLAGS="-march=native -fno-associative-math -O3")
+  cmake_flags=(-DCMAKE_BUILD_TYPE="RelWithDebugInfo" -DCMAKE_CXX_FLAGS="-march=native -fno-associative-math -Wall -O3")
 else
   echo ""
   echo "$0: Illegal build setting (-b) '$build'"
