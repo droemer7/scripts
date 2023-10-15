@@ -51,7 +51,7 @@ then
   cmake_flags=()
 elif [ $build == "debug" ]
 then
-  cmake_flags=(-DCMAKE_BUILD_TYPE="Debug" -DCMAKE_CXX_FLAGS="-Wall -O0")
+  cmake_flags=(-DCMAKE_CXX_FLAGS="-Wall -O0 -g")
 elif [ $build == "release" ]
 then
   cmake_flags=(-DCMAKE_CXX_FLAGS="-Wall -fno-associative-math -march=native -O3")
